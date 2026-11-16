@@ -62,15 +62,3 @@ python -m pip install -r requirements.txt
 5. Q5 includes the exact M/M/1 formula results and a seeded discrete-event queue model. These are analytical/simulated results, not measurements from the office router.
 6. Q6 uses RTT accounting. Actual TLS negotiation and HTTP/3 support must be checked against live websites using the commands in `configs/`.
 7. Q7 transfers a test file over a real local TCP socket and verifies its SHA-256 digest. The 100 ms RTT and 5% loss are a separate application-level impairment illustration; localhost TCP itself was not subjected to `tc netem`.
-
-## Submission evidence still to collect on your own machine
-
-- Wireshark loopback capture for Q1 and a capture of a TLS 1.3 handshake for Q6.
-- `tc netem` loss/delay tests and `ss -ti` output where required.
-- Browser DevTools protocol/load-time tests for Q3.
-- `dig +trace`, resolver timing and NXDOMAIN lookup for Q4.
-- `iperf3` fairness test and real queue/ping measurements for Q2/Q5.
-- Packet Tracer or other simulator evidence if your faculty expects it for the selected tasks.
-- Progressive Git commits (at least one per task) and the faculty-facing repository link.
-
-Do not describe any of the above evidence as completed until you have actually run it and saved the output.
